@@ -1,3 +1,4 @@
+Python App for Microsoft Rewards Point
 English:
 Application that automates the acquisition of "Microsoft Rewards" points. For the program to function properly, you must first log into the desired account on the Edge browser. The application will then independently open the browser and start accumulating points, continuing until it reaches the maximum possible for the day.
 
