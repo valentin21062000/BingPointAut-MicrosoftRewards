@@ -25,8 +25,8 @@ class Worker(QThread):
 
         while True:
             browser.get('https://rewards.bing.com/redeem/pointsbreakdown')
-            p_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "p.pointsDetail.c-subheading-3.ng-binding")))
-            progress_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "p[ng-bind-html='$ctrl.pointProgressText'].pointsDetail.c-subheading-3.ng-binding")))
+           progress_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,"div.border div.pointsDetail div.content p[ng-bind-html='$ctrl.pointProgressText'].pointsDetail.c-subheading-3.ng-binding")))
+            p_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,"div.border div.pointsDetail div.content div.body-inner div.title-detail p.pointsDetail.c-subheading-3.ng-binding")))
             time.sleep(5)
             if p_element and p_element.text and progress_element and progress_element.text:
                 points_earned = int(p_element.text.split()[0])
